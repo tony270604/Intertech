@@ -65,30 +65,21 @@ body {
 
 /* HERO */
 .hero {
-  background: linear-gradient(rgba(31,41,55,0.7), rgba(31,41,55,0.7)), url('images/serviciosbanner.jpg') center/cover;
+  background: linear-gradient(rgba(31,41,55,0.7), rgba(31,41,55,0.7)), url('images/nosotrosbanner.jpg') center/cover;
   color: white;
   text-align: left;
   padding: 10rem 5%;
   display: flex;
   align-items: center;
 }
-.hero-content { max-width: 2000px; }
+.hero-content { max-width: 700px; }
 .hero h1 {
   font-family: 'Merriweather', serif;
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
-.boton-primario {
-  background: var(--color-secundario);
-  border: none;
-  color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-.boton-primario:hover { background: #d97706; }
+
 
 /* INFO SECTIONS */
 .info {
@@ -113,47 +104,6 @@ body {
   margin-bottom: 1rem;
 }
 
-/* SERVICIOS */
-.servicios {
-  padding: 5rem 5%;
-  background: #fff;
-  text-align: center;
-}
-.servicios h2 {
-  font-family: 'Merriweather', serif;
-  color: var(--color-primario);
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-}
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.card {
-  background: var(--fondo);
-  border-radius: 12px;
-  padding: 1.5rem;
-  width: 280px;
-  transition: transform .3s ease, box-shadow .3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-.card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-.card h3 {
-  color: var(--color-primario);
-  margin-bottom: .5rem;
-}
-
-
 /* SPONSORS */
 .sponsors {
   text-align: center;
@@ -162,7 +112,7 @@ body {
 .sponsors .logos {
   display: flex;
   justify-content: center;
-  gap: 12rem;
+  gap: 4rem;
   margin-top: 2rem;
 }
 .sponsors .logos img {
@@ -175,21 +125,6 @@ body {
   transform: scale(1.1);
   opacity: 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* FOOTER */

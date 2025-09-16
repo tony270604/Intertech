@@ -9,6 +9,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* bordes redondeados */
+    .img-wrapper {
+      border-radius: 15px;
+      overflow: hidden;
+      display: inline-block;
+    }
+    .img-wrapper img {
+      width: 100%;
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <!-- NAV -->
@@ -20,7 +44,7 @@
       <nav class="links">
         <a href="index.html">Inicio</a>
         <a href="servicios.html">Servicios</a>
-        <a href="#">Nosotros</a>
+        <a href="nosotros.html">Nosotros</a>
         <a href="#">Contacto</a>
         <a href="#" class="cta">Llámanos</a>
       </nav>
@@ -82,8 +106,8 @@
     <div class="logos">
       <div class="img-wrapper"><img src="images/iconos/fecha.png" alt=""><div><h3>Atención 24/7</h3></div></div>
       <div class="img-wrapper"><img src="images/iconos/medalla.png" alt=""><div><h3>Calidad garantizada</h3></div></div>
-      <div class="img-wrapper"><img src="images/iconos/repuestos.png" alt=""><div><h3>Equipo capacitado</h3></div></div>
-      <div class="img-wrapper"><img src="images/iconos/trabajoequipo.png" alt=""><div><h3>Repuestos Originales</h3></div></div>
+      <div class="img-wrapper"><img src="images/iconos/repuestos.png" alt=""><div><h3>Repuestos Originales</h3></div></div>
+      <div class="img-wrapper"><img src="images/iconos/trabajoequipo.png" alt=""><div><h3>Equipo capacitado</h3></div></div>
     </div>
   </section>
 
@@ -107,5 +131,24 @@
       <p>info@intertech.com</p>
     </div>
   </footer>
+
+    <!-- SCRIPT PARA ANIMACIONES -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elementos = document.querySelectorAll(".fade-up");
+
+    const observador = new IntersectionObserver((entradas) => {
+      entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("visible");
+        } else {
+          entrada.target.classList.remove("visible"); // 👈 se reinicia al salir
+        }
+      });
+    }, { threshold: 0.15 });
+
+    elementos.forEach(el => observador.observe(el));
+  });
+  </script>
 </body>
 </html>
