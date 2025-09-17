@@ -27,6 +27,21 @@ body {
     grid-template-rows: auto 1fr auto;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 ul {
     list-style: none;
 }
@@ -37,9 +52,12 @@ a {
 
 /*--------------------Barra de Navegación---------------------*/
 .net {
-    position: sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     background-color: var(--white-color);
+    z-index: 999;
 }
 
 /* Networks */
@@ -101,12 +119,10 @@ a {
 
 /* Header */
 .header {
-    top: 0;
-    left: 0;
     width: 100%;
     background: var(--degradado-back-color);
     box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
-    z-index: 100;
+    z-index: 1000;
 }
 
 /* Nav */
@@ -330,19 +346,19 @@ a {
 
     .dropdown-menu {
         position: absolute;
-        top: calc(var(--header-height));
+        top: 100%;
         left: 0;
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.3s ease;
         background-color: var(--back-color-light);
         border-radius: 4px;
+        z-index: 2000;
     }
 
     .dropdown-item:hover .dropdown-menu {
         opacity: 1;
         pointer-events: auto;
-        max-height: 1000px;
     }
 }
 
@@ -472,6 +488,7 @@ footer .group-2 {
 main {
     display: flex;
     justify-content: center;
+    margin-top: 8rem;
 }
 
 .container-main {

@@ -28,3 +28,20 @@ document.querySelectorAll('.dropdown-item > .nav-link').forEach(item => {
 document.getElementById("btn-user").addEventListener("click", () => {
   window.open("https://www.intertechperu.net:2096/logout/?locale=es", "_blank");
 });
+
+/*SCRIPT PARA ANIMACIONES */
+document.addEventListener("DOMContentLoaded", () => {
+    const elementos = document.querySelectorAll(".fade-up");
+
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add("visible");
+            }else{
+                entrada.target.classList.remove("visible");
+            }
+        });
+    }, { threshold: 0.15 });
+
+    elementos.forEach(el => observador.observe(el));
+});
