@@ -24,7 +24,6 @@ body {
     display: grid;
     min-height: 100dvh;
     grid-template-rows: auto 1fr auto;
-
 }
 
 ul {
@@ -35,20 +34,8 @@ a {
     text-decoration: none;
 }
 
-/* Header */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin-top: 2.7rem;
-    width: 100%;
-    background-color: var(--back-color);
-    box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
-    z-index: 100;
-}
-
 .net {
-    position: fixed;
+    position: sticky;
     width: 100%;
     background-color: var(--white-color);
 }
@@ -108,6 +95,16 @@ a {
 .icon:hover {
     background-color: #0f669f;
     color: #fff;
+}
+
+/* Header */
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--back-color);
+    box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
+    z-index: 100;
 }
 
 /* Nav */
@@ -255,7 +252,7 @@ a {
 /* Responsive: Mobile */
 @media screen and (max-width: 1118px) {
     .nav-menu {
-        margin-top: -0.1rem;
+        margin-top: 2.6rem;
         display: block;
         position: absolute;
         top: var(--header-height);
@@ -272,6 +269,7 @@ a {
     .nav-menu.show-menu {
         opacity: 1;
         pointer-events: initial;
+        margin-top: 2.6rem;
     }
 
     .nav-list {
