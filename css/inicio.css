@@ -2,7 +2,7 @@
 
 :root {
     --header-height: 5rem;
-    --max-width-page:  1120px;
+    --max-width-page: 1120px;
     --back-color: #0F669F;
     --color-orange: #eb6433;
     --back-color-lighten: #1380C0;
@@ -234,7 +234,6 @@ a {
 }
 
 .dropdown-link:hover {
-    background-color: var(--back-color-lighten);
     color: #eb6433;
 }
 
@@ -277,6 +276,7 @@ a {
 
     .nav-list {
         padding-top: 0.7rem;
+        padding-left: 0.8rem;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -284,7 +284,7 @@ a {
 
     .nav-link {
         padding: 1.25rem 1.5rem;
-        justify-content: center;
+        justify-content: left;
     }
 
     .dropdown-menu {
@@ -292,7 +292,12 @@ a {
     }
 
     .dropdown-link {
-        justify-content: center;
+        justify-content: left;
+        margin-left: 2.2rem;
+    }
+
+    .continer-call:hover {
+        transform: none;
     }
 }
 
