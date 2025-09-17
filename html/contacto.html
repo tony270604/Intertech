@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +13,9 @@
 </head>
 <body>
 
-    <div class="net">
+    <div class="net fade-up">
         <div class="networks">
-            <button class="btn-brochure">
+            <button class="btn-brochure" id="btnBrochure">
                 Brochure
             </button>
             <div class="icons">
@@ -45,13 +46,17 @@
                                 <i class="ri-arrow-down-s-line dropdown-arrow"></i>
                             </div>
                             <ul class="dropdown-menu">
-                                <li><a href="./servicios.html" class="dropdown-link"><i class="fa-solid fa-wrench"></i> Mantenimiento
+                                <li><a href="./servicios.html" class="dropdown-link"><i class="fa-solid fa-wrench"></i>
+                                        Mantenimiento
                                         General</a></li>
-                                <li><a href="./servicios.html" class="dropdown-link"><i class="fa-solid fa-helmet-safety"></i> Revisión
+                                <li><a href="./servicios.html" class="dropdown-link"><i
+                                            class="fa-solid fa-helmet-safety"></i> Revisión
                                         Técnica</a></li>
-                                <li><a href="./servicios.html" class="dropdown-link"><i class="fa-solid fa-eye-dropper"></i> Cambio de
+                                <li><a href="./servicios.html" class="dropdown-link"><i
+                                            class="fa-solid fa-eye-dropper"></i> Cambio de
                                         Aceite</a></li>
-                                <li><a href="./servicios.html" class="dropdown-link"><i class="ri-truck-fill"></i> Cambio de Motor</a>
+                                <li><a href="./servicios.html" class="dropdown-link"><i class="ri-truck-fill"></i>
+                                        Cambio de Motor</a>
                                 </li>
                             </ul>
                         </li>
@@ -60,7 +65,7 @@
                         <li><a href="./contacto.html" class="nav-link">Contacto</a></li>
 
                         <li>
-                            <a href="https://www.figma.com/design/8NIWpj86Thjsx271yCbsLm/Intertech?t=F0OAWKHv9d8Kt5fM-1" class="nav-link"><i class="ri-user-fill user"></i></a>
+                            <a class="nav-link"><i class="ri-user-fill user" id="btn-user"></i></a>
                         </li>
                         <li>
                             <a href="" class="nav-link continer-call">
@@ -76,11 +81,56 @@
         </header>
     </div>
 
-    <main>
-        <h1>Contacto</h1>
+    <main class="fade-up">
+        <div class="container-main">
+            <section class="contact-section">
+                <div class="contact-header">
+                    <h2>Contáctanos</h2>
+                    <p>
+                        Para asistirle más rápidamente, por favor revise las secciones disponibles a continuación para
+                        aclarar cualquier duda que tenga.
+                    </p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:prueba@gmail.com">prueba@gmail.com</a>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>999-999-999</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jr. San Lino 6378 Urb. Sta. Luisa, - Los Olivos – Lima – Perú</span>
+                        </div>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7806.641337392026!2d-77.070811!3d-11.952286!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ce27a0725bc3%3A0x1b06bbd0b565bd28!2sINTERTECH%20EIRL!5e0!3m2!1ses-419!2sus!4v1758122025950!5m2!1ses-419!2sus" 
+                                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Envíanos un Mensaje</h3>
+                        <p>Completa el siguiente formulario y nuestro equipo se pondrá en contacto contigo.</p>
+
+                        <form id="formContacto">
+                            <input type="text" name="nombre" placeholder="Nombres *" required />
+                            <input type="tel" name="telefono" placeholder="Teléfono *" required />
+                            <input type="email" name="email" placeholder="Email *" required />
+                            <textarea name="mensaje" rows="5" placeholder="Mensaje *" required></textarea>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <footer>
+    <footer class="fade-up">
         <div class="container-footer">
             <div class="group-1">
                 <div class="box">
@@ -118,4 +168,6 @@
         </div>
     </footer>
 </body>
+<script src="../js/contacto.js"></script>
+
 </html>
