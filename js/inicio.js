@@ -23,3 +23,8 @@ document.querySelectorAll('.dropdown-item > .nav-link').forEach(item => {
         parent.classList.toggle('show-dropdown');
     });
 });
+
+/*Para ver el cpanel*/
+document.getElementById("btn-user").addEventListener("click", () => {
+  window.open("https://www.intertechperu.net:2096/logout/?locale=es", "_blank");
+});
